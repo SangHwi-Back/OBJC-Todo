@@ -14,7 +14,7 @@ Objective-C 실습을 위한 앱 개발입니다.
   - UIButton
 * 아키텍처는 클린 아키텍처의 양파 그림을 토대로 진행해 봅니다.
 
-![CleanArchitecture](./Assets.xcassets/CleanArchitecture.imageset/CleanArchitecture.jpg)
+![CleanArchitecture](OBJC-Todo/Resources/Assets.xcassets/CleanArchitecture.imageset/CleanArchitecture.jpg)
 
 * 뷰 모델을 작성하고 유닛 테스트를 작성합니다.
   - 뷰 모델의 Reactivity 를 위해 [ReactiveObjC](https://github.com/ReactiveCocoa/ReactiveObjC) 를 설치합니다.

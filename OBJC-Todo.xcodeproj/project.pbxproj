@@ -16,9 +16,9 @@
 		1B05AFD52B43B47300F02D5C /* OBJC_TodoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B05AFD42B43B47300F02D5C /* OBJC_TodoUITestsLaunchTests.m */; };
 		1B05AFE92B43BD2400F02D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B05AFE32B43BD2400F02D5C /* Assets.xcassets */; };
 		1B05AFEA2B43BD2400F02D5C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B05AFE42B43BD2400F02D5C /* SceneDelegate.m */; };
-		1B05AFEB2B43BD2400F02D5C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1B05AFE52B43BD2400F02D5C /* README.md */; };
 		1B05AFEC2B43BD2400F02D5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B05AFE62B43BD2400F02D5C /* AppDelegate.m */; };
 		1B05AFED2B43BD2400F02D5C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B05AFE72B43BD2400F02D5C /* Info.plist */; };
+		421F5CA846E2F4F5BC832CEC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 421F51BCFC0628AD4BB3D09B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		1B05AFE22B43BD2400F02D5C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1B05AFE32B43BD2400F02D5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B05AFE42B43BD2400F02D5C /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		1B05AFE52B43BD2400F02D5C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1B05AFE62B43BD2400F02D5C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1B05AFE72B43BD2400F02D5C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B05AFE82B43BD2400F02D5C /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		421F51BCFC0628AD4BB3D09B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +91,7 @@
 				1B05AFC72B43B47300F02D5C /* OBJC-TodoTests */,
 				1B05AFD12B43B47300F02D5C /* OBJC-TodoUITests */,
 				1B05AFAA2B43B47100F02D5C /* Products */,
+				421F51BCFC0628AD4BB3D09B /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,7 +141,6 @@
 				1B05AFE22B43BD2400F02D5C /* AppDelegate.h */,
 				1B05AFE32B43BD2400F02D5C /* Assets.xcassets */,
 				1B05AFE42B43BD2400F02D5C /* SceneDelegate.m */,
-				1B05AFE52B43BD2400F02D5C /* README.md */,
 				1B05AFE62B43BD2400F02D5C /* AppDelegate.m */,
 				1B05AFE72B43BD2400F02D5C /* Info.plist */,
 				1B05AFE82B43BD2400F02D5C /* SceneDelegate.h */,
@@ -253,9 +253,9 @@
 			files = (
 				1B05AFBC2B43B47300F02D5C /* LaunchScreen.storyboard in Resources */,
 				1B05AFE92B43BD2400F02D5C /* Assets.xcassets in Resources */,
-				1B05AFEB2B43BD2400F02D5C /* README.md in Resources */,
 				1B05AFED2B43BD2400F02D5C /* Info.plist in Resources */,
 				1B05AFB72B43B47100F02D5C /* Main.storyboard in Resources */,
+				421F5CA846E2F4F5BC832CEC /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
