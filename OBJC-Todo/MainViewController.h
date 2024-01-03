@@ -6,9 +6,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TodoModel.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+{
+//    NSMutableArray *todos;
+//    UITableView __weak *tableView;
+}
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property NSMutableArray *todos;
 
 @end
 

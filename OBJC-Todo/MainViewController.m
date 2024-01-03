@@ -7,22 +7,45 @@
 
 #import "ReactiveObjC.h"
 #import "MainViewController.h"
-
-@interface MainViewController ()
-
-@end
+#import "MainTableViewCellView.h"
+#import "TodoModel.h"
 
 @implementation MainViewController
 
-- (void)viewDidLoad {
+@synthesize todos, tableView;
+
+- (void)loadView
+{
+    [super loadView];
+    todos = [NSMutableArray array];
+    [todos addObject:[[TodoModel alloc] init]];
+    [todos addObject:[[TodoModel alloc] init]];
+    [todos addObject:[[TodoModel alloc] init]];
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    RACSignal *letters = [@"A B C D E F G H I" componentsSeparatedByString:@" "]
-        .rac_sequence
-        .signal;
-    
-    [letters subscribeNext:^(NSString *x) {
-        NSLog(@"%@", x);
-    }];
+    [tableView setDelegate:self];
+    [tableView setDataSource:self];
+    [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [tableView reloadData];
+}
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mainTableViewCell"];
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [todos count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 155;
 }
 
 @end
