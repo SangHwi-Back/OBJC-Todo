@@ -17,9 +17,9 @@
 		1B05AFE92B43BD2400F02D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B05AFE32B43BD2400F02D5C /* Assets.xcassets */; };
 		1B05AFEA2B43BD2400F02D5C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B05AFE42B43BD2400F02D5C /* SceneDelegate.m */; };
 		1B05AFEC2B43BD2400F02D5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B05AFE62B43BD2400F02D5C /* AppDelegate.m */; };
-		1B05AFF12B43DCBC00F02D5C /* MainTableViewCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B05AFF02B43DCBC00F02D5C /* MainTableViewCellView.m */; };
 		1B05AFF32B43DCF200F02D5C /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B05AFF22B43DCF200F02D5C /* MainTableViewCell.xib */; };
 		1B05AFFD2B44FB1E00F02D5C /* TodoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B05AFFC2B44FB1E00F02D5C /* TodoModel.m */; };
+		1B05B0002B453EEA00F02D5C /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B05AFFF2B453EEA00F02D5C /* MainTableViewCell.m */; };
 		421F5A617B6845A679071EF3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 421F5636017AA0FEE0DB440A /* Podfile */; };
 		421F5CA846E2F4F5BC832CEC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 421F51BCFC0628AD4BB3D09B /* README.md */; };
 		4657CF3776016DB246F621C9 /* Pods_OBJC_TodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F704B687F0AD294D22AAE4 /* Pods_OBJC_TodoTests.framework */; };
@@ -65,11 +65,11 @@
 		1B05AFE62B43BD2400F02D5C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1B05AFE72B43BD2400F02D5C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B05AFE82B43BD2400F02D5C /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		1B05AFEF2B43DCBB00F02D5C /* MainTableViewCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCellView.h; sourceTree = "<group>"; };
-		1B05AFF02B43DCBC00F02D5C /* MainTableViewCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCellView.m; sourceTree = "<group>"; };
 		1B05AFF22B43DCF200F02D5C /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		1B05AFFB2B44FB1E00F02D5C /* TodoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoModel.h; sourceTree = "<group>"; };
 		1B05AFFC2B44FB1E00F02D5C /* TodoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoModel.m; sourceTree = "<group>"; };
+		1B05AFFE2B453EEA00F02D5C /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		1B05AFFF2B453EEA00F02D5C /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		421F51BCFC0628AD4BB3D09B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		421F5636017AA0FEE0DB440A /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		48BB67BD92000AC2A3249697 /* Pods-OBJC-Todo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBJC-Todo.debug.xcconfig"; path = "Target Support Files/Pods-OBJC-Todo/Pods-OBJC-Todo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,8 +148,8 @@
 				1B05AFE12B43BD2400F02D5C /* Resources */,
 				1B05AFB22B43B47100F02D5C /* MainViewController.h */,
 				1B05AFB32B43B47100F02D5C /* MainViewController.m */,
-				1B05AFEF2B43DCBB00F02D5C /* MainTableViewCellView.h */,
-				1B05AFF02B43DCBC00F02D5C /* MainTableViewCellView.m */,
+				1B05AFFE2B453EEA00F02D5C /* MainTableViewCell.h */,
+				1B05AFFF2B453EEA00F02D5C /* MainTableViewCell.m */,
 				1B05AFFB2B44FB1E00F02D5C /* TodoModel.h */,
 				1B05AFFC2B44FB1E00F02D5C /* TodoModel.m */,
 				1B05AFB52B43B47100F02D5C /* Main.storyboard */,
@@ -446,10 +446,10 @@
 			files = (
 				1B05AFEC2B43BD2400F02D5C /* AppDelegate.m in Sources */,
 				1B05AFB42B43B47100F02D5C /* MainViewController.m in Sources */,
+				1B05B0002B453EEA00F02D5C /* MainTableViewCell.m in Sources */,
 				1B05AFEA2B43BD2400F02D5C /* SceneDelegate.m in Sources */,
 				1B05AFFD2B44FB1E00F02D5C /* TodoModel.m in Sources */,
 				1B05AFBF2B43B47300F02D5C /* main.m in Sources */,
-				1B05AFF12B43DCBC00F02D5C /* MainTableViewCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

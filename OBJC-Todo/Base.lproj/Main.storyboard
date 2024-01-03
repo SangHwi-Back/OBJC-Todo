@@ -35,28 +35,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6U5-uJ-C4p">
                                 <rect key="frame" x="0.0" y="159" width="393" height="693"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="mainTableViewCell" rowHeight="155" id="bEK-o2-YSG">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="155"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bEK-o2-YSG" id="QbF-lq-7mn">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="155"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7u-v0-3sQ" customClass="MainTableViewCellView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="155"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="a7u-v0-3sQ" firstAttribute="leading" secondItem="QbF-lq-7mn" secondAttribute="leading" id="Cf5-ou-A02"/>
-                                                <constraint firstAttribute="bottom" secondItem="a7u-v0-3sQ" secondAttribute="bottom" id="VFy-3E-pfW"/>
-                                                <constraint firstAttribute="trailing" secondItem="a7u-v0-3sQ" secondAttribute="trailing" id="bmD-mU-RTI"/>
-                                                <constraint firstItem="a7u-v0-3sQ" firstAttribute="top" secondItem="QbF-lq-7mn" secondAttribute="top" id="bpB-q4-jvE"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="Search for title" translatesAutoresizingMaskIntoConstraints="NO" id="KOl-Hm-2Hh">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>

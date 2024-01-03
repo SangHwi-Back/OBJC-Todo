@@ -7,7 +7,7 @@
 
 #import "ReactiveObjC.h"
 #import "MainViewController.h"
-#import "MainTableViewCellView.h"
+#import "MainTableViewCell.h"
 #import "TodoModel.h"
 
 @implementation MainViewController
@@ -21,6 +21,9 @@
     [todos addObject:[[TodoModel alloc] init]];
     [todos addObject:[[TodoModel alloc] init]];
     [todos addObject:[[TodoModel alloc] init]];
+    
+    UINib *nib = [UINib nibWithNibName:@"MainTableViewCell" bundle:nil];
+    [tableView registerNib:nib forCellReuseIdentifier:@"MainTableViewCell"];
 }
 
 - (void)viewDidLoad
@@ -32,9 +35,13 @@
     [tableView reloadData];
 }
 
-- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView
+                 cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mainTableViewCell"];
+    MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainTableViewCell"
+                                                              forIndexPath:indexPath];
+    
+    [cell.titleLabel setText:[NSString stringWithFormat:@"My index is %ld", [indexPath row]]];
     return cell;
 }
 
