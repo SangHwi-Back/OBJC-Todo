@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mDC-VU-BgR">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -72,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-28.169014084507044"/>
         </scene>
-        <!--View Controller-->
+        <!--Todo Insert View Controller-->
         <scene sceneID="IhS-Te-SbE">
             <objects>
-                <viewController id="J6b-JD-U5n" sceneMemberID="viewController">
+                <viewController id="J6b-JD-U5n" customClass="TodoInsertViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CpN-MM-Jjc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +125,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbF-Yt-YIC" customClass="MainTableViewCellView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbF-Yt-YIC">
                                         <rect key="frame" x="20" y="688.33333333333337" width="353" height="155"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -138,6 +139,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                        <connections>
+                                            <action selector="buttonSubmitTouchUpInsde:" destination="J6b-JD-U5n" eventType="touchUpInside" id="EHe-f0-4kC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -180,6 +184,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RgH-9V-rkq"/>
+                    <connections>
+                        <outlet property="buttonSubmit" destination="1UK-0h-qAj" id="geG-bz-5Y8"/>
+                        <outlet property="contentsTextView" destination="Mqf-YK-acV" id="neI-Mw-lnZ"/>
+                        <outlet property="imageView" destination="8LH-sb-nUL" id="o4r-eU-Ynb"/>
+                        <outlet property="previewCell" destination="fbF-Yt-YIC" id="ZgL-Zl-0UH"/>
+                        <outlet property="titleField" destination="KE9-df-IzS" id="Rt7-6o-HaK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzv-c0-d51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
