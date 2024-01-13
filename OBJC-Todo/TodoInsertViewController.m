@@ -20,8 +20,15 @@
   [super loadView];
   
   UINib *nib = [UINib nibWithNibName:@"MainTableViewCell" bundle:nil];
-  UIView *first = [[nib instantiateWithOwner:@"MainTableViewCell" options:nil] firstObject];
-  [previewCell addSubview:first];
+  NSArray *nibs = [nib instantiateWithOwner:@"MainTableViewCell"
+                                    options:nil];
+  UIView *first = [nibs firstObject];
+  if (first) {
+    UIView *first = [nibs firstObject];
+    [previewCell addSubview:first];
+  }
+  
+  lengthLimit = 15;
 }
 
 - (void)viewDidLoad {
@@ -29,7 +36,6 @@
   
   [titleField setDelegate:self];
   [contentsTextView setDelegate:self];
-  lengthLimit = 15;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender { }
@@ -38,10 +44,10 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
   
-  [self deleteLengthLimit:textField
-              currentText:[textField text]
-              changeRange:range
-          replacementText:string];
+  [self checkUITextInput:textField
+             currentText:[textField text]
+             changeRange:range
+         replacementText:string];
   
   [[self getPreviewCell].titleLabel setText:textField.text];
   return TRUE;
@@ -57,10 +63,10 @@
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
   
-  [self deleteLengthLimit:textView
-              currentText:[textView text]
-              changeRange:range
-          replacementText:text];
+  [self checkUITextInput:textView
+             currentText:[textView text]
+             changeRange:range
+         replacementText:text];
   
   [[self getPreviewCell].contentsLabel setText:textView.text];
   return TRUE;
@@ -72,10 +78,10 @@
   [[self navigationController] popViewControllerAnimated:TRUE];
 }
 
-- (void)deleteLengthLimit:(id <UITextInput>)elem
-              currentText:(NSString *)currentText
-              changeRange:(NSRange)range
-          replacementText:(NSString *)text  {
+- (void)checkUITextInput:(id <UITextInput>)elem
+             currentText:(NSString *)currentText
+             changeRange:(NSRange)range
+         replacementText:(NSString *)text  {
   NSUInteger ln = range.length;
   
   if ([text isEqual:@""] && ln > 0) { // When Delete
