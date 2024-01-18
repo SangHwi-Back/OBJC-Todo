@@ -29,10 +29,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [tableView setDelegate:self];
-    [tableView setDataSource:self];
     [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [tableView reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [tableView setDelegate:self];
+  [tableView setDataSource:self];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [tableView setDelegate:nil];
+  [tableView setDataSource:nil];
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView
