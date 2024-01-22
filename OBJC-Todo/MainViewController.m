@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "MainTableViewCell.h"
 #import "TodoModel.h"
+#import "TodoRepository.h"
 
 @implementation MainViewController
 
@@ -16,21 +17,18 @@
 
 - (void)loadView
 {
-    [super loadView];
-    todos = [NSMutableArray array];
-    [todos addObject:[[TodoModel alloc] init]];
-    [todos addObject:[[TodoModel alloc] init]];
-    [todos addObject:[[TodoModel alloc] init]];
-    
-    UINib *nib = [UINib nibWithNibName:@"MainTableViewCell" bundle:nil];
-    [tableView registerNib:nib forCellReuseIdentifier:@"MainTableViewCell"];
+  [super loadView];
+  
+  UINib *nib = [UINib nibWithNibName:@"MainTableViewCell" bundle:nil];
+  [tableView registerNib:nib forCellReuseIdentifier:@"MainTableViewCell"];
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [tableView reloadData];
+  [super viewDidLoad];
+  [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+  todos = [TodoRepository.shared todoModels];
+  [tableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -46,21 +44,23 @@
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView
                  cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainTableViewCell"
-                                                              forIndexPath:indexPath];
-    
-    [cell.titleLabel setText:[NSString stringWithFormat:@"My index is %ld", [indexPath row]]];
-    return cell;
+  MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainTableViewCell"
+                                                            forIndexPath:indexPath];
+  TodoModel* model = [TodoRepository.shared.todoModels objectAtIndex:[indexPath row]];
+  
+  [cell.titleLabel setText:model.title];
+  [cell.contentsLabel setText:model.contents];
+  return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [todos count];
+  return [todos count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 155;
+  return 155;
 }
 
 @end

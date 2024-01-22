@@ -7,8 +7,11 @@
 
 #import <UIKit/UIKit.h>
 #import "MainTableViewCell.h"
+#import "TodoModel.h"
 
 @interface TodoInsertViewController : UIViewController<UITextFieldDelegate, UITextViewDelegate>
+
+@property TodoModel *todo;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
