@@ -638,6 +638,7 @@
 				DEVELOPMENT_TEAM = L3ZPWB4HNK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OBJC-Todo/Resources/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This App uses photos for enroll Todo list";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -666,6 +667,7 @@
 				DEVELOPMENT_TEAM = L3ZPWB4HNK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OBJC-Todo/Resources/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This App uses photos for enroll Todo list";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
